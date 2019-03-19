@@ -83,7 +83,7 @@ var Engine = (function (global) {
      * apenas nas próprias entidades, em seu arquivo app.js).
      */
     function update(dt) {
-        //updateEntities(dt);
+        updateEntities(dt);
         // checkCollisions();
     }
 
@@ -95,10 +95,10 @@ var Engine = (function (global) {
      * nos métodos render.
      */
     function updateEntities(dt) {
-        // allEnemies.forEach(function (enemy) {
-        //     enemy.update(dt);
-        // });
-        //player.update();
+        allEnemies.forEach(function (enemy) {
+            enemy.update(dt);
+        });
+        // player.update();
     }
 
     /* Esta função primeiro deseha o "nível do jogo" e, depois, chama a
@@ -154,9 +154,9 @@ var Engine = (function (global) {
         /* Faça o loop por todos os objetos dentro da array allEnemies
          * e chame a função render que você definiu.
          */
-        // allEnemies.forEach(function (enemy) {
-        //     enemy.render();
-        // });
+        allEnemies.forEach(function (enemy) {
+            enemy.render();
+        });
 
         player.render();
     }

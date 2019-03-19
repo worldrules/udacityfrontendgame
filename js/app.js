@@ -1,5 +1,5 @@
 // Inimigos que nosso jogador deve evitar
-var Enemy = function (x, y, s) {
+var Enemy = function (x, y, speed) {
     // As variáveis aplicadas a nossas instâncias entram aqui.
     // Fornecemos uma a você para que possa começcar.
 
@@ -8,8 +8,11 @@ var Enemy = function (x, y, s) {
     // com facilidade.
     this.sprite = 'images/enemy-bug.png';
     this.x = x;
-    this.y = y;
-    this.speed = s;
+    this.y = y + 55; // center
+    this.step = 101;
+    this.limit = this.step * 5;
+    this.resetPos = -this.step;
+    this.speed = speed;
 };
 
 
@@ -94,6 +97,12 @@ class Hero {
 }
 
 const player = new Hero();
+const bug = new Enemy(-101, 0, 200);
+const bug2 = new Enemy(-101, 83, 300);
+const bug3 = new Enemy(-101 * 2.5, 83, 300);
+const allEnemies = [];
+allEnemies.push(bug, bug2, bug3);
+console.log(allEnemies);
 
 
 
@@ -105,6 +114,16 @@ Enemy.prototype.update = function (dt) {
     // Você deve multiplicar qualquer movimento pelo parâmetro
     // dt, o que garantirá que o jogo rode na mesma velocidade
     // em qualquer computador.
+
+    //O inimigo não passou do limite
+    if (this.x < this.limit) {
+        //Anda pra frente
+        //Aumenta x pela velocidade * dt
+        this.x += this.speed * dt;
+    } else {
+        //reseta a posição
+        this.x = this.resetPos;
+    }
 };
 
 // Desenhe o inimigo na tela, método exigido pelo jogo
