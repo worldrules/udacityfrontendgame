@@ -9,6 +9,9 @@ app.use(express.static('public'))
 
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'))
+    res.sendFile(path.join(__dirname, 'app.js'))
+    res.sendFile(path.join(__dirname, 'engine.js'))
+    res.sendFile(path.join(__dirname, 'resources.js'))
 })
 
 app.set('port', port)
