@@ -1,4 +1,4 @@
-var port = 8080;
+// var port = 8080;
 // Inimigos que nosso jogador deve evitar
 var Enemy = function (x, y, speed) {
     // As variáveis aplicadas a nossas instâncias entram aqui.
@@ -7,7 +7,7 @@ var Enemy = function (x, y, speed) {
     // A imagem/sprite de nossos inimigos, isso usa um
     // ajudante que é fornecido para carregar imagens
     // com facilidade.
-    this.sprite = "../images/enemy-bug.png";
+    this.sprite = "images/enemy-bug.png";
 
     this.x = x;
     this.y = y + 55; // center
@@ -41,7 +41,7 @@ var Enemy = function (x, y, speed) {
 // Construtor
 class Hero {
     constructor() {
-        this.sprite = "../images/char-boy.png";
+        this.sprite = "images/char-boy.png";
         this.step = 101;
         this.jump = 83;
         this.startX = this.step * 2;
