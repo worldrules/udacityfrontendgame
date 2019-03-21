@@ -2,7 +2,7 @@ var port = 8080;
 // Inimigos que nosso jogador deve evitar
 var Enemy = function (x, y, speed) {
     // As variáveis aplicadas a nossas instâncias entram aqui.
-    // Fornecemos uma a você para que possa começcar.
+    // Fornecemos u[ma a você para que possa começcar.
 
     // A imagem/sprite de nossos inimigos, isso usa um
     // ajudante que é fornecido para carregar imagens
