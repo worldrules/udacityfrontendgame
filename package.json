@@ -1,4 +1,26 @@
-"scripts": {
-    "start": "app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-},
+{
+    "name": "start",
+    "version": "1.0.0",
+    "description": "frontend-nanodegree-arcade-game\r ===============================",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/worldrules/udacityfrontendgame.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/worldrules/udacityfrontendgame/issues"
+    },
+    "homepage": "https://github.com/worldrules/udacityfrontendgame#readme",
+
+
+    "engines": {
+        "node": "7.8.0",
+        "npm": "4.2.0"
+    }
+}
