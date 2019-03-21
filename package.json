@@ -2,9 +2,9 @@
     "name": "start",
     "version": "1.0.0",
     "description": "frontend-nanodegree-arcade-game\r ===============================",
-    "main": "index.js",
+    "main": "index.html",
     "scripts": {
-        "start": "index.html",
+        "start": "node server.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
